@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Press+Start+2P&family=Roboto+Mono:wght@300;700&display=swap');
+
+/*!!!dodělat doma!!!*/
+:root {
+  --color-light: #fff;
+  --color-dark: #0b2129;
+  --color-primary: #17a2b7;
+  --color-primary-hover: #053545;
+  --color-secondary-hover: #0d323ee8;
+  --color-secondary-20: #86cdd9;
+  --font-header: 'Montserrat', sans-serif;
+  --font-text: 'Montserrat', sans-serif;
+  --font-basic-size: 1.2rem;
+  --form-border-radius: 4px;
+  --form-input-border: 1px solid var(--color-primary);
+}
+
+
+
+/* Prostředí */
+body {
+  font-family: var(--font-text);
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+h1, h2, h3 { 
+  color: var(--color-primary);
+  font-family: var(--font-header);
+}
+
+h1 {
+  font-size: 1.2rem;
+}
+
+
+
+
+
+/*navigace*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    background-color: var(--color-primary-hover);
+    font-size: 170%;
+    text-decoration: none;
+    border-radius: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    margin: auto;
+    margin-top: 20px;
+    padding: 0;
+    right: 50px;
+}
+
+nav ul {
+    display: flex;
+    height: 15px;
+    margin: 20px;
+    padding: 0;
+}
+
+li > a {
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--color-light);
+    transition: all 0.5s ease;
+}
+  
+li > a:hover {
+    font-size: 20px;
+    color: var(--color-primary);
+    transform: scale(1.5);
+}
+
+li {
+    display: inline-block;
+    padding-left: 20px;
+}
+
+
+
+
+/*container*/
+.container {
+    width: 800px;
+    margin: auto;
+}
+
+
+section {
+    display: flex;
+}
+
+
+
+
+/*obrazky na tipy plateb*/
+#platba {
+  display: flex;
+  justify-content: center;
+}
+
+.platby1, .platby2, .platby3 {
+  position: relative;
+  font-size: 80px;
+  color: var(--color-light);
+  margin: 50px;
+  transition: all 0.7s ease;
+}
+
+.platby1:hover, .platby2:hover, .platby3:hover {
+  color: var(--color-secondary-20);
+  transform: scale(1.7);
+}
+
+.platby1:hover p, .platby2:hover p, .platby3:hover p {
+  opacity: 1;
+  transform: translateY(80px);
+  transition: all 0.8s
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.platby1 p, .platby2 p, .platby3 p {
+  position: absolute;
+  font-size: 12px;
+  top: 10px;
+  left: 0%;
+  transform: translateX(-0%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+
+
+/*GRID.css*/
+* {
+  box-sizing: border-box;
+}
+
+.galerie {
+  display:grid;
+  gap: 6px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 250px);
+}
+
+.obrazek {
+  background-size: cover;
+  background-position: center;
+  /*background-color: blueviolet;*/
+}
+
+#a1 {
+  background-image: url(./images/pingu.jpeg);
+}
+
+#a2 {
+  background-image: url(./images/pingu.jpeg);
+}
+
+#a3 {
+  background-image: url(./images/pingu.jpeg);
+}
+
+#k4 {
+  background-image: url(./images/manipulace\ pro\ programování\ 1.png);
+}
+
+#k5 {
+  background-image: url(./images/manipulace\ pro\ programování\ 1.png);
+}
+
+#k6 {
+  background-image: url(./images/manipulace\ pro\ programování\ 1.png);
+}
+
+
+
+
+
+
+
+
+
+/*Odebírat---newsletter*/
+.popup-overlay {
+  z-index: 1;
+  background-color:  var(--color-secondary-hover);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.popup-window {
+  z-index: 1;
+  width: 470px;
+  height: 350px;
+  padding: 1rem;
+  position: fixed;
+  left: calc((100vw - 470px) / 2);
+  top: calc((100vh - 350px) / 2);
+  background: rgb(5, 112, 129);
+  background: linear-gradient(333deg, rgba(5, 112, 129, 1) 0%, rgba(4, 61, 75, 1) 31%, rgba(4, 44, 57, 1) 61%, rgba(5, 112, 129, 1) 100%);
+  border-radius: 12px;
+}
+/*!!!ZDE BARVY NEMNĚNÍM PŘES ROOT PROTOŽE SE MI TO VŽDYCKY NEPOVEDE TAKŽE TO NECHÁVÁM TAKHLE!!!*/
+input[type="email"] {
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 16px;
+}
+
+input[type="email"]:focus {
+  outline: 2px solid blue;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+
+
+
+/*TM a jíne chráněné značky*/
+#footer {
+  display: flex;
+  justify-content: center;
+  position:relative;
+  bottom: 0;
+  width: 100%;
+  color: var(--color-light);
+  padding: 10px;
+}
+
+
+
+
+
+/*něco čemu nerozumím*/
+* {box-sizing: border-box;}
+
+main {
+    margin: auto;
+    max-width: 700px;
+}
+
+
+
+
+
+
+
+/* Responsive styles */
+@media only screen and (max-width: 1000px) {
+  body {
+    font-size: px;
+  }
+
+  /* Navigation */
+  nav {
+    position:inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav li {
+    margin-bottom: 10px;
+  }
+
+  .logo {
+    display: block;
+    margin: 0;
+    padding: 6px;
+    text-align: center;
+    flex: 1 1 100%;
+  }
+
+  .png {
+    width: 1000px;
+  }
+
+  .menu {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid var(--color-light);
+    flex: 1 1 100%;
+  }
+
+  .menu li:first-child {
+    border-top: none;
+  }
+
+  /* Sections */
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .platby1,
+  .platby2,
+  .platby3 {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+}
+
+
+/* galerie s pěti obrázky */
+@media only screen and (max-width: 780px) {
+  .galerie {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 250px);
+    grid-auto-flow: dense;
+  }
+
+  #k1, #k3 {
+    grid-column: 1 / 3;
+  }
+}
+
+
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+input[type="email"] {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+  outline: none;
+}
+
+input[type="email"]:focus {
+  border-color: #555;
+}
+
+.consent {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0069d9;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Zatím to nech bejt nerozumiš tomu(zeptej se znovu učiztele) */
+.obrazek {
+  flex: 5 0 220px;
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+}
+
+#k1 {
+  background-image: url(...);
+}
+
+#k2 {
+  background-image: url(./obrazky/kocka2.jpg);
+  background-position-y: 30%;
+}
+
+#k3 {
+  background-image: url(./obrazky/kocka3.jpg);
+  background-position: left;
+}
+
+@media only screen and (max-width: 780px) {
+  .galerie {
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

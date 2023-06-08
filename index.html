@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WEB-0.1</title>
+  <style> 
+  </style>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=PT+Serif&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/ad7c3c6ec6.js" crossorigin="anonymous"></script>
+  <script src="java.js" type="module"></script>
+</head>
+
+
+
+
+<!--HLAVÍ PANEL-->
+<body class="černá">
+
+
+  <nav>
+    <section id="png">
+      <div class="logo">
+        <img src="./images/logo dark lux.png" alt="Doge Lorem" height="80">
+      </div>
+    </section>
+    
+
+    <ul class="menu">
+      
+      <li><a href="#INFO">Další INFO</a></li>
+      <li><a href="#Onás">O nás</a></li>
+      <li><a href="#Kontakt">Kontakt</a></li>
+    </ul>
+  </nav>
+
+<main>
+
+<!--O NÁS-->
+<br>
+<section id="Onás">
+  <div class="obrazek">
+    <img src="./images/pingu.jpeg" alt="Doge Lorem" height="150">
+  </div>
+  
+    <br>
+
+  <div>
+    <h2>O nás</h2>
+    <p>Vítejte v DARK-luxeSTUDIO™! Jsme tým talentovaných grafických designérů, kteří se specializují na tvorbu kreativních a unikátních vizuálních řešení. Naše služby jsou dostupné pro malé i velké podniky, start-upy, neziskové organizace a jednotlivce. Těšíme se na spolupráci s vámi a na možnost pomoci vám přinést vaše projekty na další úroveň.</p>
+  </div>   
+</section>
+
+<!--INFO-->
+<br>
+<section id="INFO">
+  <div class="obrazek">
+    <img src="./images/pingu.jpeg" alt="Doge Lorem" height="150">
+  </div>
+  
+    <br>
+
+    <div class="col-md-6">
+      <h2 class="section-title">Další INFO</h2>
+      <p class="section-description">Jsme tým nadšených grafických designérů, kteří se zaměřují na tvorbu moderních a kreativních designů pro vaše projekty. Kromě grafického designu nabízíme také další služby jako branding a vizuální identita, web design, animace a tiskoviny.</p>
+      <p class="section-description">Naším cílem je vytvořit design, který plně vyhovuje vašim potřebám a představám. Rádi spolupracujeme s našimi zákazníky na každém kroku a jsme tu, abychom vám pomohli vytvořit vynikající designové řešení.</p>
+    </div> 
+</section>
+
+
+<!--KONTAKT-->
+<br>
+<section id="Kontakt">
+  <div class="obrazek">
+    <img src="./images/pingu.jpeg" alt="Doge Lorem" height="150">
+  </div>
+  
+    <br>
+
+  <div>
+    <h2>Kontakt</h2>
+    <p>- telefon: 267 071 111</p> 
+    <p>- email: blabla@gmail.com</p>
+    <p>- sídlo: Kříženeckého nám. 322/5, 152 00 Praha 5-Hlubočepy</p>
+  </div>   
+</section>
+
+<!--Taková jako galerie-->
+<body>
+  <div class="galerie">
+    <div class="obrazek" id="a1"></div>
+    <div class="obrazek" id="a2"></div>
+    <div class="obrazek" id="a3"></div>
+    <div class="obrazek" id="k4"></div>
+    <div class="obrazek" id="k5"></div>
+    <div class="obrazek" id="k6"></div>
+  </div>
+</body>
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+<!--MOŽNOSTI PLATBY-->
+<h1 id="platba">Možnosti platby:</h1>
+
+<header>
+  <div class="platby1">
+    <i class="fa-solid fa-money-bill"></i>
+    <p>Platba hotově</p>
+  </div>
+
+  <div class="platby2">
+    <i class="fa-solid fa-landmark"></i>
+    <p>Platba bankovním převodem</p>
+  </div>
+
+  <div class="platby3">
+    <i class="fa-solid fa-credit-card"></i>
+    <p>Platba kartou</p>
+  </div>  
+</header>
+
+<div><!--NEHNĚVAT SE PROSÍM.-->
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+
+<div class="popup-overlay">
+  <div class="popup-window">
+    <button class="close-button" onclick="closePopup()">X</button>
+    <footer>
+      <form>
+        <label for="email-input">Přihlásit se k odběru newsletteru:</label>
+        <br>
+        <input type="email" id="email-input" name="email" placeholder="Váš e-mail" required>
+        <br>
+        <input type="checkbox" id="agree-checkbox" name="agree" required>
+        <label for="agree-checkbox"><a href="#zpracovani-osobnich-udaju">Souhlasím se zpracováním osobních údajů</a></label>
+        <br>
+        <input type="submit" value="Odeslat">
+      </form>
+    </footer>
+  </div>
+</div>
+
+<script>
+  document.querySelector('.logo').addEventListener('click', () => {
+    document.querySelector('.menu').classList.toggle('skryte');
+  });
+
+  function closePopup() {
+    var overlay = document.querySelector('.popup-overlay');
+    overlay.style.display = 'none';
+  }
+</script>
+
+
+<!--newsletter-->
+<footer>
+  <form>
+    <label for="email-input">Přihlásit se k odběru newsletteru:</label>
+    <br>
+    <input type="email" id="email-input" name="email" placeholder="Váš e-mail" required>
+    <br>
+    <input type="checkbox" id="agree-checkbox" name="agree" required>
+    <label for="agree-checkbox"><a href="#zpracovani-osobnich-udaju">Souhlasím se zpracováním osobních údajů</a></label>
+    <br>
+    <input type="submit" value="Odeslat">
+  </form>
+</footer>
+  
+  <br><br><br><br>
+  
+  <aside>
+    <div></div>
+    <div id="footer">DARK-luxeSTUDIO&trade;</div>
+  </aside>
+  <footer id="footer">&copy;&nbsp;2023</footer>
+
+</body>
+</html>
+
+  
+
+
+
+
